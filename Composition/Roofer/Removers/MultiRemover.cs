@@ -1,10 +1,10 @@
 ﻿namespace Composition.Roofer.Removers
 {
-    internal class RemoverDecorator : IRoofRemover
+    internal class MultiRemover : IRoofRemover
     {
         readonly List<IRoofRemover> _Removers;
 
-        public RemoverDecorator(params IRoofRemover[] remover)
+        public MultiRemover(params IRoofRemover[] remover)
         {
             _Removers = new List<IRoofRemover>();
             _Removers.AddRange(remover);
