@@ -11,8 +11,12 @@ using Composition.Roofer.Removers;
 //var remover = new WoodRemover();
 
 //remove wood and apply asphalt
+//var applier = new AsphaltApplier();
+//var remover = new WoodRemover();
+
+//remove two different layers and apply asphalt
 var applier = new AsphaltApplier();
-var remover = new WoodRemover();
+var remover = new RemoverDecorator(new WoodRemover(), new AsphaltRemover());
 
 var roofer = new Roofer(remover, applier);
 
