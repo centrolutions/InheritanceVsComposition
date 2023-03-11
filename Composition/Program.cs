@@ -1,8 +1,10 @@
 ﻿
 using Composition.Roofer;
+using Composition.Roofer.Appliers;
+using Composition.Roofer.Removers;
 
-IApplyShingles applier = new AsphaltApplier();
-ITearOffRoof remover = new AsphaltRemover();
+IRoofApplier applier = new AsphaltApplier();
+IRoofRemover remover = new AsphaltRemover();
 var roofer = new Roofer(remover, applier);
 
 roofer.Setup();

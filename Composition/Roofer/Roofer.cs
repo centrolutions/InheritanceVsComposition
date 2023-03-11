@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Composition.Roofer.Appliers;
+using Composition.Roofer.Removers;
 
 namespace Composition.Roofer
 {
     internal class Roofer
     {
-        private readonly ITearOffRoof _Remover;
-        private readonly IApplyShingles _Applier;
+        private readonly IRoofRemover _Remover;
+        private readonly IRoofApplier _Applier;
 
-        public Roofer(ITearOffRoof remover, IApplyShingles applier)
+        public Roofer(IRoofRemover remover, IRoofApplier applier)
         {
             _Remover = remover;
             _Applier = applier;

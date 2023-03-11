@@ -1,6 +1,6 @@
-﻿namespace Composition.Roofer
+﻿namespace Composition.Roofer.Appliers
 {
-    internal class AsphaltApplier : IApplyShingles
+    internal class AsphaltApplier : IRoofApplier
     {
         public void ApplyShingles()
         {
