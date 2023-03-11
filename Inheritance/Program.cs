@@ -1,7 +1,7 @@
 ﻿
 using Inheritance.Roofer;
 
-var roofer = new RemoveWoodApplyAsphaltRoofer();
+var roofer = new RemoveWoodAndAsphaltApplyAsphaltRoofer();
 
 roofer.Setup();
 roofer.TearOff();
